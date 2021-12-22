@@ -1,0 +1,46 @@
+{% set theme_config = attribute(config.themes, config.system.pages.theme) %} 
+{% set logo = theme_var('custom_logo') %} {% set logo_file = (logo|first).name %}
+<!DOCTYPE html>
+<html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
+
+<head>
+    {% block head %}
+    <meta charset="utf-8" />
+    <title>
+        {% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}
+    </title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% include 'partials/metadata.html.twig' %}
+
+    <link rel="icon" type="image/png" href="{{ url('theme://images/logo/' ~ logo_file)  }}" />
+    <link rel="canonical" href="{{ page.url(true, true) }}" />
+    {% endblock head %} {% block stylesheets %} {% do
+    assets.addCss('https://cdn.jsdelivr.net/npm/picnic', 100) %} {% do
+    assets.addCss('https://fonts.googleapis.com/css?family=Open Sans', 100) %} {% do
+    assets.addCss('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
+    99) %} {% do assets.addCss('theme://css/new-styles.css', 98) %} {% endblock %}
+    {% block assets deferred %}
+    {{
+      assets.css() | raw
+    }}
+    {{
+      assets.js() | raw
+    }}
+    {% endblock %}
+</head>
+
+<body>
+    {% block header %} {% include 'partials/navigation.html.twig' %} {% endblock
+    %} {% block body %}
+    {% block content %}{% endblock %}
+
+    {% endblock %} {% block footer %} {% include 'partials/footer.html.twig'
+    with {'page': page.find('/footer', true)} %} {% endblock %} {% block bottom
+    %}
+    {{ assets.js("bottom") | raw }}
+    {% endblock %}
+</body>
+
+</html>

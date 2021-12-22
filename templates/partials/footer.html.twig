@@ -1,0 +1,35 @@
+{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+<div class="flex one center footer">
+  <div class="flex">
+    {% for socialMediaIcon in page.header.socialMediaIcons %}
+      {% if socialMediaIcon.icon is not empty %}
+      <a href="{{socialMediaIcon.url}}" style="color:{{socialMediaIcon.colorpicker}}" class="{{socialMediaIcon.icon}} icon"></a>
+      {% endif %}
+      {% if socialMediaIcon.imageicon is not empty %}
+      <a href="{{socialMediaIcon.url}}"><img class="image" src="{{ socialMediaIcon.imageicon }}" alt="{{socialMediaIcon.imageicon.filename}}"></a>
+      {% endif %}
+      {% if socialMediaIcon.imageurlicon is not empty %}
+      <a href="{{socialMediaIcon.url}}"><img class="image" src="{{ socialMediaIcon.imageurlicon }}" alt="{{socialMediaIcon.imageurlicon}}"></a>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <div class="fcontent">
+      {{ page.content|markdown }}
+  </div>
+  <div class="flex">
+    {% for largeIcon in page.header.largeIcons %}
+    {% if largeIcon.icon is not empty %}
+    <a href="{{largeIcon.url}}" style="color:{{largeIcon.colorpicker}}"
+      class="{{largeIcon.icon}} largeicon"></a>
+    {% endif %}
+    {% if largeIcon.imageicon is not empty %}
+    <a href="{{largeIcon.url}}"><img class="largeimage" src="{{ largeIcon.imageicon }}"
+        alt="{{largeIcon.imageicon.filename}}"></a>
+    {% endif %}
+    {% if largeIcon.imageurlicon is not empty %}
+    <a href="{{largeIcon.url}}"><img class="largeimage" src="{{ largeIcon.imageurlicon }}"
+        alt="{{largeIcon.imageurlicon}}"></a>
+    {% endif %}
+    {% endfor %}
+  </div>
+</div>

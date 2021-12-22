@@ -1,0 +1,28 @@
+title: Stat Panels
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        home-panels:
+          type: tab
+          title: Stat Panels
+          fields:
+            header.statpanels:
+              name: statpanels
+              type: list
+              label: Stat Panels
+              fields:
+                .icon:
+                  type: iconpicker
+                  label: Icon
+                .colorpicker:
+                  type: colorpicker
+                  label: Stat Color
+                .header:
+                  type: text
+                  label: Statistic
+                .text:
+                  type: editor
+                  label: Text

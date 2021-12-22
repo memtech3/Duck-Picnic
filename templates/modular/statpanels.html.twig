@@ -1,0 +1,15 @@
+<div class="flex one four-800 eight-1400 center statpanels">
+    {% for statpanel in header.statpanels %}
+    <div>
+        <article class="card">
+            <header style="border:none;">
+                {% if statpanel.icon is not empty %}
+                <a href="{{statpanel.url}}" style="color:{{statpanel.colorpicker}}" class="{{statpanel.icon}} icon"></a>
+                {% endif %}
+                <span>{{ statpanel.text|markdown }}</span>
+                <h style="font-color: {{statpanel.color}};">{{ statpanel.header }}</h>
+            </header>
+        </article>
+    </div>
+    {% endfor %}
+</div>

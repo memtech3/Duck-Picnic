@@ -1,0 +1,58 @@
+<div class="flex one two-1000 grow home-panels fullwidth-background">
+    {% for onetwothird in header.onetwothirds %}    
+    {% if loop.index is odd %}
+    <div class="fourth">
+        <article class="card">
+            <header>
+                <h>{{ onetwothird.header }}</h><br>
+                {% if onetwothird.icon is not empty %}
+                <a href="{{onetwothird.url}}" style="color:{{onetwothird.colorpicker}}" class="{{onetwothird.icon}} onetwothirdicon"></a>
+                {% endif %}
+                {% if onetwothird.imageicon is not empty %}
+                <a href="{{onetwothird.url}}"><img class="onetwothirdimage" src="{{ onetwothird.imageicon }}" alt="{{onetwothird.imageicon.filename}}"></a>
+                {% endif %}
+                {% if onetwothird.imageurlicon is not empty %}
+                <a href="{{onetwothird.url}}"><img class="onetwothirdimage" src="{{ onetwothird.imageurlicon }}" alt="{{onetwothird.imageurlicon}}"></a>
+                {% endif %}
+            </header>
+        </article>
+    </div>
+    <div>
+        <article class="card">
+            <header>
+                <h>{{ onetwothird.header }}</h>
+            </header>
+            <p>{{ onetwothird.text|markdown }}</p>
+        </article>
+    </div>
+    {% else %}
+    <div>
+        <article class="card grey">
+            <header>
+                <h>{{ onetwothird.header }}</h>
+            </header>
+            <p>{{ onetwothird.text|markdown }}</p>
+        </article>
+    </div>
+    <div class="fourth">
+        <article class="card grey">
+            <header>
+                <h>{{ onetwothird.header }}</h><br>
+                {% if onetwothird.icon is not empty %}
+                <a href="{{onetwothird.url}}" style="color:{{onetwothird.colorpicker}}"
+                    class="{{onetwothird.icon}} onetwothirdicon"></a>
+                {% endif %}
+                {% if onetwothird.imageicon is not empty %}
+                <a href="{{onetwothird.url}}"><img class="onetwothirdimage" src="{{ onetwothird.imageicon }}"
+                        alt="{{onetwothird.imageicon.filename}}"></a>
+                {% endif %}
+                {% if onetwothird.imageurlicon is not empty %}
+                <a href="{{onetwothird.url}}"><img class="onetwothirdimage" src="{{ onetwothird.imageurlicon }}"
+                        alt="{{onetwothird.imageurlicon}}"></a>
+                {% endif %}
+            </header>
+        </article>
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>

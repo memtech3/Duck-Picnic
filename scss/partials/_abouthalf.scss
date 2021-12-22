@@ -1,0 +1,30 @@
+.abouthalf {
+    justify-items:center ;
+	article {
+		padding-left: 2%;
+		padding-right: 2%;
+		height: 100%;
+		border: none;
+		max-width: 40em;
+		header {
+			border: none;
+			font-size: 32px;
+			text-align: center;
+			.icon {
+				color: #b84545;
+				font-size: 3em;
+			}
+		}
+		p {
+			font-size: 14px;
+        }
+    iframe{
+        display:block;
+        margin-left: auto;
+        margin-right: auto;    
+    }
+	}
+	.grey {
+		background-color: #f4f4f4;
+	}
+}

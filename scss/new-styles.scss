@@ -1,0 +1,33 @@
+@import 'partials/base';
+@import 'partials/_alert';
+@import 'partials/landing-feature';
+@import 'partials/statpanels';
+@import 'partials/homepanels';
+@import 'partials/abouthalf';
+@import 'partials/footer';
+.onetwothirdimage {
+	max-height: 7em;
+}
+.onetwothirdicon {
+	font-size: 7em;
+}
+.fullwidth-background {
+	padding-right: 0%;
+	padding-left: 0%;
+}
+@media only screen and (max-width: 1000px) {
+	.mobile-invis {
+		display: none;
+	}
+	.mobile-vis {
+		display: unset;
+	}
+}
+@media only screen and (min-width: 1000px) {
+	.mobile-invis {
+		display: unset;
+	}
+	.mobile-vis {
+		display: none;
+	}
+}

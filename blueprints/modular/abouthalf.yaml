@@ -1,0 +1,23 @@
+title: About Half
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        lander:
+          type: tab
+          title: About Half
+          fields:
+            header.firstHalfHeader:
+              type: text
+              label: First Half Header
+            header.firstHalf:
+              type: editor
+              label: Second Half
+            header.secondHalf:
+              type: editor
+              label: Second Half
+            header.secondHalfHeader:
+              type: text
+              label: Second Half Header

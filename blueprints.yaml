@@ -1,0 +1,43 @@
+name: Duck Picnic
+slug: duck-picnic
+type: theme
+version: 0.1.0
+description: A versatile Grav CMS theme built with Picnic CSS. Originally designed to replace a divi theme
+icon: rebel
+author:
+  name: Micah Guttman (memtech3@gmail.com), Daniel Fountaine (dfountaine@placeholder.placeholder), Matthew Ashem
+  email: memtech3@gmail.com
+homepage:
+demo:
+keywords: grav, theme, etc
+bugs:
+readme:
+license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.6.0' }
+
+form:
+  validation: loose
+  fields:
+    dropdown.enabled:
+        type: toggle
+        label: Dropdown in Menu
+        highlight: 1
+        default: 1
+        options:
+          1: PLUGIN_ADMIN.ENABLED
+          0: PLUGIN_ADMIN.DISABLED
+        validate:
+          type: bool
+    
+    custom_logo:
+      type: file
+      label: Custom Logo
+      size: large
+      destination: 'theme://images/logo'
+      multiple: false
+      markdown: true
+      description: Will be used instead of default logo `theme://images/grav-logo.svg`
+      accept:
+        - image/*

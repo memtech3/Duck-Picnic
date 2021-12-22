@@ -1,0 +1,3 @@
+<div style="background: {% if header.background is empty %}{% else %} {{header.background}}{% endif %};" class="flex one center">
+                <h style="font-size: 49px; text-align:center; color: {% if header.textcolor is empty %}{% else %} {{header.textcolor}}{%endif%};">{{header.text|markdown}}</h>
+        </div>

@@ -1,0 +1,44 @@
+{% if config.plugins['emergency-mode'].emergency %}
+<div class="alert">{{ config.plugins['emergency-mode'].text_var }}</div>
+<nav class="nav-alert">
+{% else %}
+<nav>
+{% endif %}
+    <a href="{{ home_url }}" class="brand">
+        <img class="logo" src="{{ url('theme://images/logo/' ~ logo_file)  }}" />
+        <span></span>
+    </a>
+
+    <!-- responsive-->
+    <input id="bmenub" type="checkbox" class="show">
+    <label for="bmenub" class="burger pseudo button">menu</label>
+
+    <div class="menu">
+        {% for page in pages.children %}
+            {% if page.visible %}
+                {% set counter = 0 %}
+                    {% for child in page.children %}
+                        {% if child.modular is empty %}
+                            {% set counter = counter + 1 %}
+                        {% endif %}
+                    {% endfor %}
+                {% if counter is same as(0) %}
+                    <a href="{{ page.url }}" class="pseudo button">{{  page.menu }}</a>
+                {% else %}
+                <div class="dropdown">
+                    <a class="pseudo button">{{ page.menu }}</a>
+                        <div class="content">
+                            <a href="{{ page.url }}" class="pseudo button">{{  page.menu }}</a>
+                                {% for childpage in page.children%}
+                                    {% if childpage.modular is empty %}
+                                        <a href="{{ childpage.url }}">{{  childpage.menu }}</a>
+                                    {% endif %}
+                                {% endfor %}
+                        </div>
+                    </div>
+                {% endif %}
+                {% endif %}
+            {% endfor %}
+
+    </div>
+</nav>

@@ -1,0 +1,17 @@
+title: Lander
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        lander:
+          type: tab
+          title: Lander
+          fields:
+            header.text:
+              type: editor
+              label: Text
+            header.link:
+              type: text
+              label: Button Link

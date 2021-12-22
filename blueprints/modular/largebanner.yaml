@@ -1,0 +1,20 @@
+title: Large Banner
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        lander:
+          type: tab
+          title: Large Banner
+          fields:
+            header.text:
+              type: editor
+              label: Text
+            header.textcolor:
+              type: colorpicker
+              label: Text Color
+            header.background:
+              type: colorpicker
+              label: Background Color

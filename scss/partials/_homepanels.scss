@@ -1,0 +1,29 @@
+.home-panels {
+	padding-left: 2%;
+	padding-right: 2%;
+	article {
+		border: none;
+		height: 100%;
+		header {
+			border: none;
+			font-size: 32px;
+			text-align: center;
+			.image {
+				height: 4em;
+			}
+			.icon {
+				color: #b84545;
+				font-size: 4em;
+			}
+		}
+		p {
+			font-size: 14px;
+		}
+	}
+	div {
+		padding: 0;
+	}
+	.grey {
+		background-color: #f4f4f4;
+	}
+}

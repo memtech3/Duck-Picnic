@@ -1,0 +1,35 @@
+{% set logo = theme_var('custom_logo') %} {% set logo_file = (logo|first).name %}
+
+<div style="{% if header.textcolor %}color: {{header.textcolor}};{%endif%}" class="landing-feature media-background lander100">
+  <div class="background">
+    <video class="media" preload="metadata" autoplay loop muted>
+      <source src="{{header.video}}" type="video/mp4">
+    </video>
+  </div>
+  <div style="{% if header.backgroundcolor %}background: {{header.backgroundcolor}};{% endif %}{% if header.opacity %}opacity: {{ header.opacity/100 }};{% endif %}" class="overlay"></div>
+  <div class="content flex one two-1000 grow">
+    {% if header.noimage == false %}
+    <div><img class="logo" src="{{ url('theme://images/logo/' ~ logo_file)  }}" alt=""></div>
+    {% endif %}
+    <div>
+      <article class="card">
+        <header>
+          <h>{% if header.header %} {{header.header}} {% else %}{{ site.title }}{% endif %}</h>
+        </header>
+        <p>{{ header.body|markdown }}</p>
+        <div class="flex">
+        {% for row in header.rows %}
+        <div style="padding-left:12.5%; padding-right:12.5%;" class="flex center">
+          {% for button in row.buttons %}
+          <a href="{{ button.link }}" style="{% if button.customcolor %}background:{{button.customcolor}};{% endif %}" class="button {{button.color}}">{{ button.text }}</a>&nbsp;
+          {% endfor %}
+        </div>
+        {% endfor %}
+      </article>
+    </div>
+  </div>
+  <br>
+</div>
+<style>
+
+</style>

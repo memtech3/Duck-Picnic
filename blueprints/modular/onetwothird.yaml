@@ -1,0 +1,46 @@
+title: One Two Thirds
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        onetwothirds:
+          type: tab
+          title: One Two Thirds
+          fields:
+            header.image:
+              type: file
+              label: Image
+              destination: 'user/pages/images'
+              accept:
+                - image/*
+            header.onetwothirds:
+              name: onetwothirds
+              type: list
+              label: One Two Thirds
+
+              fields:
+                .icon:
+                  type: iconpicker
+                  label: Icon
+                .colorpicker:
+                  type: colorpicker
+                  label: Icon Color
+                .imageicon:
+                  type: mediapicker
+                  folder: 'user/pages/images'
+                  label: Select an image to use as an icon
+                  preview_images: true
+                .imageurlicon:
+                  type: text
+                  label: Input a url to use as an icon
+                .header:
+                  type: text
+                  label: Header
+                .text:
+                  type: editor
+                  label: Text
+                .url:
+                  type: text
+                  label: Link
