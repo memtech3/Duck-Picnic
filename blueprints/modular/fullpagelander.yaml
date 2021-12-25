@@ -87,6 +87,13 @@ form:
               info: Change the appearance of the full page lander
               icon: paint-brush
               fields:
+                header.height:
+                  type: range
+                  label: Hero Height
+                  default: 25
+                  validate:
+                    min: 0
+                    max: 100
                 header.textcolor:
                   type: colorpicker
                   label: Text Color
