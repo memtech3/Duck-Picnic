@@ -8,7 +8,7 @@
     </video>
   </div>
   {% endif %}
-  <div style="{% if header.backgroundcolor %}background: {{header.backgroundcolor}};{% endif %}{% if header.opacity %}opacity: {{ header.opacity/100 }};{% endif %}height:{{header.height}}vh;" class="overlay"></div>
+  <div style="{% if appearance.backgroundcolor %}background: {{appearance.backgroundcolor}};{% endif %}{% if appearance.opacity %}opacity: {{ appearance.opacity/100 }};{% endif %}height:{{appearance.height}}vh;" class="overlay"></div>
   <div class="content flex one two-1000 grow">
     {% if header.noimage == false %}
     <div><img class="logo" src="{{ url('theme://images/logo/' ~ logo_file)  }}" alt=""></div>
@@ -18,7 +18,7 @@
         <header>
           <h>{% if header.header %} {{header.header}} {% else %}{{ site.title }}{% endif %}</h>
         </header>
-        <p>{{ header.body|markdown }}</p>
+        <p>{{ content.body|markdown }}</p>
         <div class="flex">
         {% for row in header.rows %}
         <div style="padding-left:12.5%; padding-right:12.5%;" class="flex center">
