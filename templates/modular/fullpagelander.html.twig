@@ -1,11 +1,13 @@
 {% set logo = theme_var('custom_logo') %} {% set logo_file = (logo|first).name %}
 
 <div style="{% if header.textcolor %}color: {{header.textcolor}};{%endif%}" class="landing-feature media-background lander100">
+  {% if header.video %}
   <div class="background">
     <video class="media" preload="metadata" autoplay loop muted>
       <source src="{{header.video}}" type="video/mp4">
     </video>
   </div>
+  {% endif %}
   <div style="{% if header.backgroundcolor %}background: {{header.backgroundcolor}};{% endif %}{% if header.opacity %}opacity: {{ header.opacity/100 }};{% endif %}" class="overlay"></div>
   <div class="content flex one two-1000 grow">
     {% if header.noimage == false %}
