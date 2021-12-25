@@ -41,3 +41,55 @@ form:
       description: Will be used instead of default logo `theme://images/grav-logo.svg`
       accept:
         - image/*
+    footer:
+      type: fieldset
+      title: Footer
+      fields:
+        footer.content:
+          type: editor
+          label: Content
+        
+        footer.socialMediaIcons:
+          name: socialMediaIcons
+          type: list
+          label: Social Media Icons
+          fields:
+            .icon:
+              type: iconpicker
+              label: Icon
+            .colorpicker:
+              type: colorpicker
+              label: Icon Color
+            .imageicon:
+              type: mediapicker
+              folder: 'user/pages/images'
+              label: Select an image to use as an icon
+              preview_images: true
+            .imageurlicon:
+              type: text
+              label: Input a url to use as an icon
+            .url:
+              type: text
+              label: Link
+        footer.largeIcons:
+          name: largeIcons
+          type: list
+          label: Large Icons
+          fields:
+            .icon:
+              type: iconpicker
+              label: Icon
+            .colorpicker:
+              type: colorpicker
+              label: Icon Color
+            .imageicon:
+              type: mediapicker
+              folder: 'user/pages/images'
+              label: Select an image to use as an icon
+              preview_images: true
+            .imageurlicon:
+              type: text
+              label: Input a url to use as an icon
+            .url:
+              type: text
+              label: Link
