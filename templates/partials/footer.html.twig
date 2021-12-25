@@ -14,7 +14,7 @@
     {% endfor %}
   </div>
   <div class="fcontent">
-      {{ page.content|markdown }}
+      {{ page.content|raw }}
   </div>
   <div class="flex">
     {% for largeIcon in page.header.largeIcons %}
