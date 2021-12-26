@@ -1,5 +1,5 @@
 .landing-feature {
-	background-color: #F9D537;
+	display: flex;
 	padding-top: 80px;
 	align-items: center;
 	@media screen and (min-width: 600px) {
@@ -38,26 +38,8 @@
 		}
 	}
 }
-@mixin height($height) {
-		height: $height;
-		.background {
-			height: $height;
-			.media {
-				min-height: $height;
-			}
-		}
-		.overlay {
-			height: $height;
-		}
 
-	}
-.lander100{
-	@include height(100vh)
-}
-.media-background {
-	display: flex;
-	align-items: center;
-	.background {
+.background {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -65,8 +47,8 @@
 		overflow: hidden;
 		.media {
 			min-width: 100%;
+			min-height: 100%
 		}
-	}
 
 	.overlay {
 		position: absolute;
@@ -74,8 +56,6 @@
 		left: 0;
 		width: 100vw;
 		z-index: 1;
-		background: #F9D537;
-		opacity: 0.65;
 	}
 
 	.content {

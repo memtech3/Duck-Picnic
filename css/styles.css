@@ -64,7 +64,7 @@ body {
 }
 
 .landing-feature {
-  background-color: #F9D537;
+  display: flex;
   padding-top: 80px;
   align-items: center;
 }
@@ -108,43 +108,25 @@ body {
   min-height: 3em;
 }
 
-.lander100 {
-  height: 100vh;
-}
-.lander100 .background {
-  height: 100vh;
-}
-.lander100 .background .media {
-  min-height: 100vh;
-}
-.lander100 .overlay {
-  height: 100vh;
-}
-
-.media-background {
-  display: flex;
-  align-items: center;
-}
-.media-background .background {
+.background {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   overflow: hidden;
 }
-.media-background .background .media {
+.background .media {
   min-width: 100%;
+  min-height: 100%;
 }
-.media-background .overlay {
+.background .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
   z-index: 1;
-  background: #F9D537;
-  opacity: 0.65;
 }
-.media-background .content {
+.background .content {
   z-index: 2;
 }
 

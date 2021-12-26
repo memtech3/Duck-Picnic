@@ -1,14 +1,14 @@
 {% set logo = theme_var('custom_logo') %} {% set logo_file = (logo|first).name %}
 
-<div style="{% if header.textcolor %}color: {{header.textcolor}};{%endif%}height:{{header.height}}vh;" class="landing-feature media-background">
-  {% if header.video %}
-  <div style="height:{{header.height}}vh;" class="background">
+<div style="{% if header.appearance.textcolor %}color:{{header.appearance.textcolor}};{%endif%}height:{{header.appearance.height}}vh;background-color:{{header.appearance.backgroundcolor}}" class="landing-feature">
+  {% if header.content.backgroundvideo %}
+  <div style="height:{{header.appearance.height}}vh;" class="background">
     <video class="media" preload="metadata" autoplay loop muted>
-      <source src="{{header.video}}" type="video/mp4">
+      <source src="{{header.content.backgroundvideo}}" type="video/mp4">
     </video>
   </div>
+  <div style="background:{{header.appearance.backgroundcolor}};opacity:{{ header.appearance.opacity/100 }};height:{{header.appearance.height}}vh;" class="overlay"></div>
   {% endif %}
-  <div style="{% if appearance.backgroundcolor %}background: {{appearance.backgroundcolor}};{% endif %}{% if appearance.opacity %}opacity: {{ appearance.opacity/100 }};{% endif %}height:{{appearance.height}}vh;" class="overlay"></div>
   <div class="content flex one two-1000 grow">
     {% if header.noimage == false %}
     <div><img class="logo" src="{{ url('theme://images/logo/' ~ logo_file)  }}" alt=""></div>
@@ -16,9 +16,9 @@
     <div>
       <article style="max-width:750px" class="card">
         <header>
-          <h>{% if header.header %} {{header.header}} {% else %}{{ site.title }}{% endif %}</h>
+          <h>{% if header.content.header %} {{header.content.header}} {% else %}{{ site.title }}{% endif %}</h>
         </header>
-        <p>{{ content.body|markdown }}</p>
+        <p>{{ header.content.body|markdown }}</p>
         <div class="flex">
         {% for row in header.rows %}
         <div style="padding-left:12.5%; padding-right:12.5%;" class="flex center">
