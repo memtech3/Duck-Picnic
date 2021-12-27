@@ -9,43 +9,50 @@ form:
           type: tab
           title: Full Page Lander
           fields:
-            header.contentfieldset:
+            header.content:
               type: fieldset
               title: Content
               help: Check the checkbox next to the field(s) you want to use. Deselect checkboxes next to fields that you want to use theme defaults 
               info: Edit the content of the full page lander
               icon: file-text
               fields:
-                header.header:
+                .header:
                   type: text
                   label: Header
                   toggleable: true
-                header.body:
+                .body:
                   type: editor
                   label: Body
-                header.noimage:
+                .noimage:
                   type: checkbox
                   label: Remove image
-                header.landerimage:
+                .overlayimage:
                   type: mediapicker
                   folder: 'user/pages/media/images'
-                  label: Select an image
+                  label: Select an image to use as an overlay
                   preview_images: true
                   toggleable: true
-                header.imagefilepicker:
+                .backgroundvideo:
+                    type: mediapicker
+                    folder: 'user/pages/media/'
+                    label: Select a video to use as a background
+                    preview_images: true
+                    toggleable: true
+                .imageupload:
                   type: file
                   label: Upload images
                   destination: 'user/pages/media/images'
                   accept:
+                    - image/*
                     - video/*
-            header.buttonfieldset:
+            header.buttons:
               type: fieldset
               title: Buttons
               help:
               info: Edit the buttons on the full page lander
               icon: object-group
               fields:
-                header.rows:
+                .rows:
                   name: rows
                   type: list
                   style: vertical
@@ -80,37 +87,33 @@ form:
                           type: colorpicker
                           toggleable: true
                           label: Custom Button Color
-            header.appearancefieldset:
+            header.appearance:
               type: fieldset
               title: Appearance
               help: Check the checkbox next to the field(s) you want to use. Deselect checkboxes next to fields that you want to use theme defaults 
               info: Change the appearance of the full page lander
               icon: paint-brush
               fields:
-                header.textcolor:
-                  type: colorpicker
-                  label: Text Color
-                  toggleable: true
-                header.backgroundcolor:
-                  type: colorpicker
-                  label: Background Color
-                  toggleable: true
-                header.opacity:
+                .height:
                   type: range
-                  label: Background Opacity
-                  toggleable: true
+                  label: Hero Height
+                  default: 50
                   validate:
                     min: 0
                     max: 100
-                header.video:
-                    type: mediapicker
-                    folder: 'user/pages/media/videos'
-                    label: Select a video to use as a background
-                    preview_images: true
-                    toggleable: true
-                header.filepicker:
-                    type: file
-                    label: Upload videos
-                    destination: 'user/pages/media/videos'
-                    accept:
-                      - video/*
+                .textcolor:
+                  type: colorpicker
+                  label: Text Color
+                  toggleable: true
+                  default: "#474747"
+                .backgroundcolor:
+                  type: colorpicker
+                  label: Background Color
+                  default: "#f9d537"
+                .opacity:
+                  type: range
+                  label: Background Opacity
+                  defalt: 65
+                  validate:
+                    min: 0
+                    max: 100
