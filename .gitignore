@@ -5,7 +5,9 @@
 
 #CSS and map files in SCSS folder
 /scss/*.css
+/scss/*/*.css
 /scss/*.css.map
+/scss/*/*.css.map
 
 # User-specific files
 *.rsuser
