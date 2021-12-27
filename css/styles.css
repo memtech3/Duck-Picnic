@@ -107,26 +107,24 @@ body {
   font-size: 19px;
   min-height: 3em;
 }
-
-.background {
+.landing-feature .background {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   overflow: hidden;
 }
-.background .media {
+.landing-feature .background .media {
   min-width: 100%;
   min-height: 100%;
 }
-.background .overlay {
+.landing-feature .background .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
-  z-index: 1;
 }
-.background .content {
+.landing-feature .content {
   z-index: 2;
 }
 
