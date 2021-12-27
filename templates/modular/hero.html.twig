@@ -1,6 +1,6 @@
 {% set logo = theme_var('custom_logo') %} {% set logo_file = (logo|first).name %}
 
-<div style="{% if header.appearance.textcolor %}color:{{header.appearance.textcolor}};{%endif%}height:{{header.appearance.height}}vh;background-color:{{header.appearance.backgroundcolor}}" class="landing-feature">
+<div style="{% if header.appearance.textcolor %}color:{{header.appearance.textcolor}};{%endif%}height:{{header.appearance.height}}vh;background-color:{{header.appearance.backgroundcolor}}" class="hero">
   {% if header.content.backgroundvideo %}
   <div style="height:{{header.appearance.height}}vh;" class="background">
     <video class="media" preload="metadata" autoplay loop muted>
