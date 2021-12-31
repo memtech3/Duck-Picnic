@@ -12,7 +12,7 @@
   <div class="noborderflex center grow content">
     {% if header.content.noimage == false %}
     <div class="logocontainer">
-      <img src="{{ url('theme://images/logo/' ~ logo_file)  }}" alt="">
+      <img src="{% if header.content.overlayimage %}{{header.content.overlayimage}}{% else %}{{ url('theme://images/logo/' ~ logo_file)  }}{% endif %}" alt="">
     </div>
     {% endif %}
     <div class="calltoaction">
