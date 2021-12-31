@@ -6,24 +6,30 @@
 .hero {
 	text-align: center;
 	@media screen and (min-width: 600px) {
-		padding-left: 12.5%;
-		padding-right: 12.5%;
+		padding-left: 3.125%;
+		padding-right: 3.125%;
 	}
-	.logo {
-		@media only screen and (max-width: 1096px) {
+	.logocontainer {	
+		flex: initial;
+		@media only screen and (max-width: 970px) {
 			display: none;
 		}
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-		max-height: 20em;
+		img {
+			display: block;
+			margin-left: auto;
+			margin-right: 5em;
+			max-height: 20em;
+		}
 	}
 	.content {
+		align-items: center;
 		margin: auto;
 		position: relative;
 		top: 45%;
 		transform: translateY(-50%);
-		max-width: 550px;
+		.calltoaction {
+			max-width: 550px;
+		}
   	}
 	h1 {
 		font-size: 3em;

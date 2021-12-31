@@ -67,26 +67,32 @@ body {
 }
 @media screen and (min-width: 600px) {
   .hero {
-    padding-left: 12.5%;
-    padding-right: 12.5%;
+    padding-left: 3.125%;
+    padding-right: 3.125%;
   }
 }
-.hero .logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-height: 20em;
+.hero .logocontainer {
+  flex: initial;
 }
-@media only screen and (max-width: 1096px) {
-  .hero .logo {
+@media only screen and (max-width: 970px) {
+  .hero .logocontainer {
     display: none;
   }
 }
+.hero .logocontainer img {
+  display: block;
+  margin-left: auto;
+  margin-right: 5em;
+  max-height: 20em;
+}
 .hero .content {
+  align-items: center;
   margin: auto;
   position: relative;
   top: 45%;
   transform: translateY(-50%);
+}
+.hero .content .calltoaction {
   max-width: 550px;
 }
 .hero h1 {

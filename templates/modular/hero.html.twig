@@ -2,7 +2,6 @@
 
 <header style="{% if header.appearance.textcolor %}color:{{header.appearance.textcolor}};{%endif%}height:{{header.appearance.height}}vh;background-color:{{header.appearance.backgroundcolor}}" class="hero">
   {% if header.content.backgroundvideo %}
-  {# does video need to be in a div? #}
   <div style="height:{{header.appearance.height}}vh;" class="background">
     <video class="media" preload="metadata" autoplay loop muted>
       <source src="{{header.content.backgroundvideo}}" type="video/mp4">
@@ -10,12 +9,13 @@
   <div style="background:{{header.appearance.backgroundcolor}};opacity:{{ header.appearance.opacity/100 }};height:{{header.appearance.height}}vh;" class="overlay"></div>
   </div>
   {% endif %}
-  <div class="content">
-    {% if header.noimage == false %}
-    {# does img need to be in a div? #}
-    <img class="logo" src="{{ url('theme://images/logo/' ~ logo_file)  }}" alt="">
+  <div class="noborderflex center grow content">
+    {% if header.content.noimage == false %}
+    <div class="logocontainer">
+      <img src="{{ url('theme://images/logo/' ~ logo_file)  }}" alt="">
+    </div>
     {% endif %}
-    <div>
+    <div class="calltoaction">
       <h1>{% if header.content.header %} {{header.content.header}} {% else %}{{ site.title }}{% endif %}</h1>
       <p>{{ header.content.body|markdown }}</p>
       <div class="button-rows">
