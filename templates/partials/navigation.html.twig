@@ -27,7 +27,7 @@
                 {% else %}
                 <div class="dropdown">
                     <a class="pseudo button">{{ page.menu }}</a>
-                        <div class="content">
+                        <div class="dropdown-content">
                             <a href="{{ page.url }}" class="pseudo button">{{  page.menu }}</a>
                                 {% for childpage in page.children%}
                                     {% if childpage.modular is empty %}

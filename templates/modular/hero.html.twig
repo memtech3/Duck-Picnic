@@ -20,7 +20,7 @@
       <p>{{ header.content.body|markdown }}</p>
       <div class="button-rows">
       {% for row in header.rows %}
-      <div class="buttons">
+      <div class="noborderflex">
         {% for button in row.buttons %}
         <a href="{{ button.link }}" style="{% if button.customcolor %}background:{{button.customcolor}};{% endif %}" class="button {{button.color}}">{{ button.text }}</a>
         {% if not loop.last %}&nbsp;{% endif %}

@@ -7,7 +7,7 @@ body {
 .dropdown {
 	display: inline-block;
     position: relative;
-    .content {
+    .dropdown-content {
         background-color: #f1f1f1;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         display: none;
@@ -28,7 +28,7 @@ body {
         
     }
 }
-.dropdown:hover .content {
+.dropdown:hover .dropdown-content {
 	display: block;
 }
 .dropdown:hover .dropbtn {

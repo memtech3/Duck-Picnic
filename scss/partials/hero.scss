@@ -25,15 +25,6 @@
 		transform: translateY(-50%);
 		max-width: 550px;
   	}
-	.buttons {
-		display: flex;
-		flex-wrap: wrap;
-		transition: all .3s ease;
-		.button {
-			flex: 1 1 auto;
-			padding-bottom: 0.6em;
-		}
-	}
 	h1 {
 		font-size: 3em;
 		line-height: 1;
