@@ -153,10 +153,6 @@ body {
   background-color: #f4f4f4;
 }
 
-.home-panels {
-  padding-left: 2%;
-  padding-right: 2%;
-}
 .home-panels article {
   border: none;
   height: 100%;
@@ -172,8 +168,25 @@ body {
 .home-panels article header .icon {
   color: #b84545;
   font-size: 4em;
+  transition: all 0.3s ease;
+}
+.home-panels article header:hover .fadeout, .home-panels article header:focus-within .fadeout {
+  opacity: 0.7;
+}
+.home-panels article header .link {
+  color: #474747;
+  box-shadow: 0 2px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+.home-panels article header:hover .link, .home-panels article header:focus-within .link {
+  color: #666;
+  box-shadow: 0 2px #333;
 }
 .home-panels article p {
+  justify-self: center;
+  padding-left: 3.125%;
+  padding-right: 3.125%;
+  justify-self: center;
   font-size: 14px;
 }
 .home-panels div {

@@ -1,20 +1,26 @@
-<div class="flex one three-1000 grow home-panels">
+<div class="noborderflex one three-1000 grow home-panels">
     {% for homepanel in header.homepanels %}    
     <div>
         <article class="card {% if loop.index is even %}grey{% endif %}">
-            <header>
-                {% if homepanel.icon is not empty %}
-                <a href="{{homepanel.url}}" style="color:{{homepanel.colorpicker}}" class="{{homepanel.icon}} icon"></a>
-                {% endif %}
-                {% if homepanel.imageicon is not empty %}
-                <a href="{{homepanel.url}}"><img class="image" src="{{ homepanel.imageicon }}" alt="{{homepanel.imageicon.filename}}"></a>
-                {% endif %}
-                {% if homepanel.imageurlicon is not empty %}
-                <a href="{{homepanel.url}}"><img class="image" src="{{ homepanel.imageurlicon }}" alt="{{homepanel.imageurlicon}}"></a>
-                {% endif %}
-                <br>
-                <h>{{ homepanel.header }}</h>
-            </header>
+            {% if homepanel.url %}
+            <a href="{{homepanel.url}}">
+            {% endif %}
+                <header>
+                    {% if homepanel.icon is not empty %}
+                    <span style="color:{{homepanel.colorpicker}}" class="{{homepanel.icon}} icon {% if homepanel.url %}fadeout{% endif %}"></span>
+                    {% endif %}
+                    {% if homepanel.imageicon is not empty %}
+                    <img class="image {% if homepanel.url %}fadeout{% endif %}" src="{{ homepanel.imageicon }}" alt="">
+                    {% endif %}
+                    {% if homepanel.imageurlicon is not empty %}
+                    <img class="image {% if homepanel.url %}fadeout{% endif %}" src="{{ homepanel.imageurlicon }}" alt="">
+                    {% endif %}
+                    <br>
+                    <h class="{% if homepanel.url %}link{% endif %}">{{ homepanel.header }}</h>
+                </header>
+            {% if homepanel.url %}
+            </a>
+            {% endif %}
             {{ homepanel.text|markdown }}
         </article>
     </div>
