@@ -26,7 +26,7 @@
                     <a href="{{ page.url }}" class="pseudo button">{{  page.menu }}</a>
                 {% else %}
                 <div class="dropdown">
-                    <a class="pseudo button">{{ page.menu }}</a>
+                    <button class="pseudo button">{{ page.menu }}</button>
                         <div class="dropdown-content">
                             <a href="{{ page.url }}" class="pseudo button">{{  page.menu }}</a>
                                 {% for childpage in page.children%}
