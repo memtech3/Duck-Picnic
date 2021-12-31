@@ -7,7 +7,7 @@ form:
       fields:
         lander:
           type: tab
-          title: Full Page Lander
+          title: Hero
           fields:
             header.content:
               type: fieldset
