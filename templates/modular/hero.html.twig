@@ -1,7 +1,8 @@
 {% set logo = theme_var('custom_logo') %} {% set logo_file = (logo|first).name %}
 
-<div style="{% if header.appearance.textcolor %}color:{{header.appearance.textcolor}};{%endif%}height:{{header.appearance.height}}vh;background-color:{{header.appearance.backgroundcolor}}" class="hero">
+<header style="{% if header.appearance.textcolor %}color:{{header.appearance.textcolor}};{%endif%}height:{{header.appearance.height}}vh;background-color:{{header.appearance.backgroundcolor}}" class="hero">
   {% if header.content.backgroundvideo %}
+  {# does video need to be in a div? #}
   <div style="height:{{header.appearance.height}}vh;" class="background">
     <video class="media" preload="metadata" autoplay loop muted>
       <source src="{{header.content.backgroundvideo}}" type="video/mp4">
@@ -9,27 +10,24 @@
   <div style="background:{{header.appearance.backgroundcolor}};opacity:{{ header.appearance.opacity/100 }};height:{{header.appearance.height}}vh;" class="overlay"></div>
   </div>
   {% endif %}
-  <div class="hero-content flex one two-1000 grow">
+  <div class="content">
     {% if header.noimage == false %}
-    <div><img class="logo" src="{{ url('theme://images/logo/' ~ logo_file)  }}" alt=""></div>
+    {# does img need to be in a div? #}
+    <img class="logo" src="{{ url('theme://images/logo/' ~ logo_file)  }}" alt="">
     {% endif %}
     <div>
-      <article style="max-width:750px" class="card">
-        <header>
-          <h>{% if header.content.header %} {{header.content.header}} {% else %}{{ site.title }}{% endif %}</h>
-        </header>
-        <p>{{ header.content.body|markdown }}</p>
-        <div class="button-rows">
-        {% for row in header.rows %}
-        <div class="flex buttons">
-          {% for button in row.buttons %}
-          <a href="{{ button.link }}" style="{% if button.customcolor %}background:{{button.customcolor}};{% endif %}" class="button {{button.color}}">{{ button.text }}</a>
-          {% if not loop.last %}&nbsp;{% endif %}
-          {% endfor %}
-        </div>
+      <h1>{% if header.content.header %} {{header.content.header}} {% else %}{{ site.title }}{% endif %}</h1>
+      <p>{{ header.content.body|markdown }}</p>
+      <div class="button-rows">
+      {% for row in header.rows %}
+      <div class="buttons">
+        {% for button in row.buttons %}
+        <a href="{{ button.link }}" style="{% if button.customcolor %}background:{{button.customcolor}};{% endif %}" class="button {{button.color}}">{{ button.text }}</a>
+        {% if not loop.last %}&nbsp;{% endif %}
         {% endfor %}
-        </div>
-      </article>
+      </div>
+      {% endfor %}
+      </div>
     </div>
   </div>
-</div>
+</header>

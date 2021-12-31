@@ -1,49 +1,46 @@
+// some code from and heavily influenced by picnic CSS documentation pages by Francisco Presencia
+// https://github.com/franciscop/picnic/blob/master/docs/style/_hero.scss
+// https://github.com/franciscop/picnic/blob/master/LICENSE
+// 12/31/21
+
 .hero {
-	display: flex;
-	padding-top: 80px;
-	align-items: center;
+	text-align: center;
 	@media screen and (min-width: 600px) {
 		padding-left: 12.5%;
 		padding-right: 12.5%;
 	}
 	.logo {
+		@media only screen and (max-width: 1096px) {
+			display: none;
+		}
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
 		max-height: 20em;
 	}
-	@media only screen and (max-width: 1096px) {
-		.logo {
-			display: none;
+	.content {
+		margin: auto;
+		position: relative;
+		top: 45%;
+		transform: translateY(-50%);
+		max-width: 550px;
+  	}
+	.buttons {
+		display: flex;
+		flex-wrap: wrap;
+		transition: all .3s ease;
+		.button {
+			flex: 1 1 auto;
+			padding-bottom: 0.6em;
 		}
 	}
-	article {
-		background-color: transparent;
-		border: none;
-		height: 100%;
-		header {
-			border: none;
-			font-size: 42px;
-			text-align: center;
-		}
-		p {
-			padding-right: 12.5%;
-			padding-left: 12.5%;
-			font-size: 18px;
-			@media screen and (max-width: 600px) {
-				text-align: center;
-			}
-		}
-		.button-rows {
-			.buttons {
-				margin-left: 0;
-				padding-left: 12.5%;
-				padding-right: 12.5%;
-				justify-items: center;
-				.button {
-				}
-			}
-		}
+	h1 {
+		font-size: 3em;
+		line-height: 1;
+		padding: 0;
+  	}
+	p {
+		font-size: 18px;
 	}
 	.background {
 		position: absolute;

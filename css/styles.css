@@ -64,9 +64,7 @@ body {
 }
 
 .hero {
-  display: flex;
-  padding-top: 80px;
-  align-items: center;
+  text-align: center;
 }
 @media screen and (min-width: 600px) {
   .hero {
@@ -85,31 +83,29 @@ body {
     display: none;
   }
 }
-.hero article {
-  background-color: transparent;
-  border: none;
-  height: 100%;
+.hero .content {
+  margin: auto;
+  position: relative;
+  top: 45%;
+  transform: translateY(-50%);
+  max-width: 550px;
 }
-.hero article header {
-  border: none;
-  font-size: 42px;
-  text-align: center;
+.hero .buttons {
+  display: flex;
+  flex-wrap: wrap;
+  transition: all 0.3s ease;
 }
-.hero article p {
-  padding-right: 12.5%;
-  padding-left: 12.5%;
+.hero .buttons .button {
+  flex: 1 1 auto;
+  padding-bottom: 0.6em;
+}
+.hero h1 {
+  font-size: 3em;
+  line-height: 1;
+  padding: 0;
+}
+.hero p {
   font-size: 18px;
-}
-@media screen and (max-width: 600px) {
-  .hero article p {
-    text-align: center;
-  }
-}
-.hero article .button-rows .buttons {
-  margin-left: 0;
-  padding-left: 12.5%;
-  padding-right: 12.5%;
-  justify-items: center;
 }
 .hero .background {
   position: absolute;
