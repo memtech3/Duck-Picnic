@@ -9,7 +9,7 @@
   <div style="background:{{header.appearance.backgroundcolor}};opacity:{{ header.appearance.opacity/100 }};height:{{header.appearance.height}}vh;" class="overlay"></div>
   </div>
   {% endif %}
-  <div class="content flex one two-1000 grow">
+  <div class="hero-content flex one two-1000 grow">
     {% if header.noimage == false %}
     <div><img class="logo" src="{{ url('theme://images/logo/' ~ logo_file)  }}" alt=""></div>
     {% endif %}
@@ -19,16 +19,17 @@
           <h>{% if header.content.header %} {{header.content.header}} {% else %}{{ site.title }}{% endif %}</h>
         </header>
         <p>{{ header.content.body|markdown }}</p>
-        <div class="flex">
+        <div class="button-rows">
         {% for row in header.rows %}
-        <div style="padding-left:12.5%; padding-right:12.5%;" class="flex center">
+        <div class="flex buttons">
           {% for button in row.buttons %}
-          <a href="{{ button.link }}" style="{% if button.customcolor %}background:{{button.customcolor}};{% endif %}" class="button {{button.color}}">{{ button.text }}</a>&nbsp;
+          <a href="{{ button.link }}" style="{% if button.customcolor %}background:{{button.customcolor}};{% endif %}" class="button {{button.color}}">{{ button.text }}</a>
+          {% if not loop.last %}&nbsp;{% endif %}
           {% endfor %}
         </div>
         {% endfor %}
+        </div>
       </article>
     </div>
   </div>
-  <br>
 </div>
