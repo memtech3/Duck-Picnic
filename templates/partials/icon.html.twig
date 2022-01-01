@@ -1,20 +1,20 @@
-{% if link %}
-<a href="{{ link }}">
+{% if icon.link %}
+<a href="{{ icon.link }}">
     {% endif %}
     <header>
-        {% if icon %}
-        <span style="color:{{ color }}"
-            class="{{ icon }} icon {% if link %}fadeout{% endif %}"></span>
+        {% if icon.icon %}
+        <span style="color:{{ icon.color }}"
+            class="{{ icon.icon }} icon {% if icon.link %}fadeout{% endif %}"></span>
         {% endif %}
-        {% if image %}
-        <img class="image {% if link %}fadeout{% endif %}" src="{{ image }}" alt="">
+        {% if icon.image %}
+        <img class="image {% if icon.link %}fadeout{% endif %}" src="{{ icon.image }}" alt="">
         {% endif %}
-        {% if imageurl %}
-        <img class="image {% if link %}fadeout{% endif %}" src="{{ imageurl }}" alt="">
+        {% if icon.imageurl %}
+        <img class="image {% if icon.link %}fadeout{% endif %}" src="{{ icon.imageurl }}" alt="">
         {% endif %}
         <br>
-        <h class="{% if link %}link{% endif %}">{{ header }}</h>
+        <h class="{% if icon.link %}link{% endif %}">{{ icon.header }}</h>
     </header>
-    {% if link %}
+    {% if icon.link %}
 </a>
 {% endif %}

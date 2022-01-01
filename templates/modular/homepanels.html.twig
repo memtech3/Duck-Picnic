@@ -2,9 +2,9 @@
     {% for homepanel in header.homepanels %}    
     <div>
         <article class="card {% if loop.index is even %}grey{% endif %}">
-            {% set vars = {'icon':homepanel.icon.icon, 'color':homepanel.icon.color, 'link':homepanel.icon.link, 'image':homepanel.icon.image, 
-            'imageurl':homepanel.icon.imageurl, 'header':homepanel.icon.header} %}
-           {% include 'partials/icon.html.twig' with vars %}
+            {% with {icon:homepanel.icon} %}
+            {% include 'partials/icon.html.twig' %}
+            {% endwith %}
             {{ homepanel.text|markdown }}
         </article>
     </div>
