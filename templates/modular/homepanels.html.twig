@@ -2,25 +2,9 @@
     {% for homepanel in header.homepanels %}    
     <div>
         <article class="card {% if loop.index is even %}grey{% endif %}">
-            {% if homepanel.url %}
-            <a href="{{homepanel.url}}">
-            {% endif %}
-                <header>
-                    {% if homepanel.icon is not empty %}
-                    <span style="color:{{homepanel.colorpicker}}" class="{{homepanel.icon}} icon {% if homepanel.url %}fadeout{% endif %}"></span>
-                    {% endif %}
-                    {% if homepanel.imageicon is not empty %}
-                    <img class="image {% if homepanel.url %}fadeout{% endif %}" src="{{ homepanel.imageicon }}" alt="">
-                    {% endif %}
-                    {% if homepanel.imageurlicon is not empty %}
-                    <img class="image {% if homepanel.url %}fadeout{% endif %}" src="{{ homepanel.imageurlicon }}" alt="">
-                    {% endif %}
-                    <br>
-                    <h class="{% if homepanel.url %}link{% endif %}">{{ homepanel.header }}</h>
-                </header>
-            {% if homepanel.url %}
-            </a>
-            {% endif %}
+            {% set vars = {'icon':homepanel.icon, 'color':homepanel.colorpicker, 'link':homepanel.url, 'image':homepanel.imageicon, 
+            'imageurl':homepanel.imageurlicon, 'header':homepanel.header} %}
+           {% include 'partials/icon.html.twig' with vars %}
             {{ homepanel.text|markdown }}
         </article>
     </div>
