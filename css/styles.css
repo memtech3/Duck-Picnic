@@ -47,6 +47,11 @@ main {
   max-width: 1300px;
 }
 
+table {
+  display: block;
+  overflow-x: scroll;
+}
+
 .alert {
   padding: 10px;
   color: #fff;
