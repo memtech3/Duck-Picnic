@@ -36,7 +36,14 @@ body {
     }
 }
 main {
-    padding-top: 80px; 
-    padding-left: 3.125%; 
-    padding-right: 3.125%
+    margin: {
+        left: auto;
+        right: auto;
+    }
+    padding: {
+        top: 80px;
+        left: 3.125%;
+        right: 3.125%;
+    }
+    max-width: 1300px;
 }
