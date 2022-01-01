@@ -1,6 +1,6 @@
 {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
-<div class="flex one center footer">
-  <div class="flex">
+<div class="footer">
+  <div class="noborderflex">
     {% for socialMediaIcon in grav.theme.config.footer.socialMediaIcons %}
       {% if socialMediaIcon.icon is not empty %}
       <a href="{{socialMediaIcon.url}}" style="color:{{socialMediaIcon.colorpicker}}" class="{{socialMediaIcon.icon}} icon"></a>
@@ -16,7 +16,7 @@
   <div class="content">
       {{ grav.theme.config.footer.content|markdown }}
   </div>
-  <div class="flex">
+  <div class="noborderflex">
     {% for largeIcon in grav.theme.config.footer.largeIcons %}
     {% if largeIcon.icon is not empty %}
     <a href="{{largeIcon.url}}" style="color:{{largeIcon.colorpicker}}"

@@ -1,7 +1,7 @@
 .footer {
 	@media only screen and (max-width: 980px) {
-		padding-left: 12.5%;
-		padding-right: 12.5%;
+		padding-left: 3.125%;
+		padding-right: 3.125%;
 		text-align: center;
 	}
 	@media only screen and (min-width: 980px) {
@@ -12,7 +12,10 @@
 	color: #737373;
 	padding-top: 40px;
 	.content {
-	font-size: 14px;
+		margin-right: auto;
+		margin-left: auto;
+		font-size: 14px;
+		max-width: 600px;
 	}
 	.icon {
 	font-size: 2em;
