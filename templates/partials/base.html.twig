@@ -1,5 +1,11 @@
 {% set theme_config = attribute(config.themes, config.system.pages.theme) %} 
-{% set logo = theme_var('custom_logo') %} {% set logo_file = (logo|first).name %}
+{% if theme_var('custom_logo') %} 
+{% set logo = theme_var('custom_logo') %} 
+{% set logo_file = (logo|first).name %}
+{% else %} 
+{% set logo = null %}
+{% set logo_file = 'logo.png' %}
+{% endif %}
 <!DOCTYPE html>
 <html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
 

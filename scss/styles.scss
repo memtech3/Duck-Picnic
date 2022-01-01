@@ -11,6 +11,15 @@
 .onetwothirdicon {
 	font-size: 7em;
 }
+.noborderflex {
+	display: flex;
+    flex-wrap: wrap;
+	transition: all .3s ease;
+	>* {
+		flex: 1 1 auto;
+		padding-bottom: 0.6em;  
+	}
+}
 @media only screen and (max-width: 1000px) {
 	.mobile-invis {
 		display: none;

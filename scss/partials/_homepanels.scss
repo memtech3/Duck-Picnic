@@ -1,9 +1,9 @@
 .home-panels {
-	padding-left: 2%;
-	padding-right: 2%;
 	article {
 		border: none;
 		height: 100%;
+		a {
+		}
 		header {
 			border: none;
 			font-size: 32px;
@@ -14,9 +14,33 @@
 			.icon {
 				color: #b84545;
 				font-size: 4em;
+				transition: all 0.3s ease;
+			}
+			&:hover .fadeout, &:focus-within .fadeout {
+				opacity: 0.7;
+			}
+
+			.link{
+				color: #474747;
+				box-shadow: 0 2px rgb(0 0 0 / 20%);
+				transition: all 0.3s ease;
+				// &:hover {
+				// 	box-shadow: 0 2px #333;
+				// }
+			}
+
+			&:hover .link, &:focus-within .link {
+				color: #666;
+				box-shadow: 0 2px #333;
 			}
 		}
-		p {
+		p {	
+			justify-self: center;
+			padding: {
+				left: 3.125%;
+				right: 3.125%;
+			}
+			justify-self: center;
 			font-size: 14px;
 		}
 	}

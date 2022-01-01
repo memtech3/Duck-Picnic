@@ -9,37 +9,36 @@ body {
   display: inline-block;
   position: relative;
 }
-.dropdown .content {
-  background-color: #f1f1f1;
+.dropdown:hover .dropdown-content, .dropdown:focus-within .dropdown-content {
+  display: block;
+}
+.dropdown:hover .dropbtn, .dropdown:focus-within .dropbtn {
+  background-color: #3e8e41;
+}
+.dropdown .dropdown-content {
+  background-color: #ffffff;
+  border-radius: 0.2em;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   display: none;
   min-width: 160px;
   position: absolute;
 }
 @media only screen and (max-width: 960px) {
-  .dropdown .content {
+  .dropdown .dropdown-content {
     position: relative;
   }
 }
-.dropdown .content a {
+.dropdown .dropdown-content a {
   color: black;
   display: block;
   padding: 12px 16px;
   text-decoration: none;
 }
-.dropdown .content a:hover {
+.dropdown .dropdown-content a:hover {
   background-color: #ddd;
 }
 
-.dropdown:hover .content {
-  display: block;
-}
-
-.dropdown:hover .dropbtn {
-  background-color: #3e8e41;
-}
-
-.content {
+main {
   padding-top: 80px;
   padding-left: 3.125%;
   padding-right: 3.125%;
@@ -64,52 +63,45 @@ body {
 }
 
 .hero {
-  display: flex;
-  padding-top: 80px;
-  align-items: center;
+  text-align: center;
 }
 @media screen and (min-width: 600px) {
   .hero {
-    padding-left: 12.5%;
-    padding-right: 12.5%;
+    padding-left: 3.125%;
+    padding-right: 3.125%;
   }
 }
-.hero .logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-height: 20em;
+.hero .logocontainer {
+  flex: initial;
 }
-@media only screen and (max-width: 1096px) {
-  .hero .logo {
+@media only screen and (max-width: 970px) {
+  .hero .logocontainer {
     display: none;
   }
 }
-.hero article {
-  background-color: transparent;
-  border: none;
-  height: 100%;
+.hero .logocontainer img {
+  display: block;
+  margin-left: auto;
+  margin-right: 5em;
+  max-height: 20em;
 }
-.hero article header {
-  border: none;
-  font-size: 42px;
-  text-align: center;
+.hero .content {
+  align-items: center;
+  margin: auto;
+  position: relative;
+  top: 45%;
+  transform: translateY(-50%);
 }
-.hero article p {
-  padding-right: 12.5%;
-  padding-left: 12.5%;
+.hero .content .calltoaction {
+  max-width: 550px;
+}
+.hero h1 {
+  font-size: 3em;
+  line-height: 1;
+  padding: 0;
+}
+.hero p {
   font-size: 18px;
-}
-@media screen and (max-width: 600px) {
-  .hero article p {
-    text-align: center;
-  }
-}
-.hero article .button-rows .buttons {
-  margin-left: 0;
-  padding-left: 12.5%;
-  padding-right: 12.5%;
-  justify-items: center;
 }
 .hero .background {
   position: absolute;
@@ -161,10 +153,6 @@ body {
   background-color: #f4f4f4;
 }
 
-.home-panels {
-  padding-left: 2%;
-  padding-right: 2%;
-}
 .home-panels article {
   border: none;
   height: 100%;
@@ -180,8 +168,25 @@ body {
 .home-panels article header .icon {
   color: #b84545;
   font-size: 4em;
+  transition: all 0.3s ease;
+}
+.home-panels article header:hover .fadeout, .home-panels article header:focus-within .fadeout {
+  opacity: 0.7;
+}
+.home-panels article header .link {
+  color: #474747;
+  box-shadow: 0 2px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+.home-panels article header:hover .link, .home-panels article header:focus-within .link {
+  color: #666;
+  box-shadow: 0 2px #333;
 }
 .home-panels article p {
+  justify-self: center;
+  padding-left: 3.125%;
+  padding-right: 3.125%;
+  justify-self: center;
   font-size: 14px;
 }
 .home-panels div {
@@ -222,39 +227,42 @@ body {
   background-color: #f4f4f4;
 }
 
-.footer {
+footer {
   background: #171717;
   color: #737373;
   padding-top: 40px;
 }
 @media only screen and (max-width: 980px) {
-  .footer {
-    padding-left: 12.5%;
-    padding-right: 12.5%;
+  footer {
+    padding-left: 3.125%;
+    padding-right: 3.125%;
     text-align: center;
   }
 }
 @media only screen and (min-width: 980px) {
-  .footer {
+  footer {
     padding-left: 25%;
     padding-right: 25%;
   }
 }
-.footer .content {
+footer .content {
+  margin-right: auto;
+  margin-left: auto;
   font-size: 14px;
+  max-width: 600px;
 }
-.footer .icon {
+footer .icon {
   font-size: 2em;
   text-align: center;
 }
-.footer .image {
+footer .image {
   height: 2em;
 }
-.footer .largeicon {
+footer .largeicon {
   font-size: 8em;
   text-align: center;
 }
-.footer .largeimage {
+footer .largeimage {
   height: 8em;
 }
 
@@ -264,6 +272,16 @@ body {
 
 .onetwothirdicon {
   font-size: 7em;
+}
+
+.noborderflex {
+  display: flex;
+  flex-wrap: wrap;
+  transition: all 0.3s ease;
+}
+.noborderflex > * {
+  flex: 1 1 auto;
+  padding-bottom: 0.6em;
 }
 
 @media only screen and (max-width: 1000px) {
