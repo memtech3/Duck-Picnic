@@ -1,0 +1,20 @@
+{% if link %}
+<a href="{{ link }}">
+    {% endif %}
+    <header>
+        {% if icon is not empty %}
+        <span style="color:{{ color }}"
+            class="{{ icon }} icon {% if link %}fadeout{% endif %}"></span>
+        {% endif %}
+        {% if image is not empty %}
+        <img class="image {% if link %}fadeout{% endif %}" src="{{ image }}" alt="">
+        {% endif %}
+        {% if imageurl is not empty %}
+        <img class="image {% if link %}fadeout{% endif %}" src="{{ imageurl }}" alt="">
+        {% endif %}
+        <br>
+        <h class="{% if link %}link{% endif %}">{{ header }}</h>
+    </header>
+    {% if link %}
+</a>
+{% endif %}
