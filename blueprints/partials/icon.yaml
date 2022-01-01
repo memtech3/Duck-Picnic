@@ -1,0 +1,22 @@
+form:
+  fields:
+    .icon:
+      type: iconpicker
+      label: Icon
+    .color:
+      type: colorpicker
+      label: Icon Color
+    .image:
+      type: mediapicker
+      folder: 'user/pages/images'
+      label: Select an image to use as an icon
+      preview_images: true
+    .imageurl:
+      type: text
+      label: Input a url to use as an icon
+    .header:
+      type: text
+      label: Header
+    .link:
+      type: text
+      label: Link

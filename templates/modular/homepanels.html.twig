@@ -2,8 +2,8 @@
     {% for homepanel in header.homepanels %}    
     <div>
         <article class="card {% if loop.index is even %}grey{% endif %}">
-            {% set vars = {'icon':homepanel.icon, 'color':homepanel.colorpicker, 'link':homepanel.url, 'image':homepanel.imageicon, 
-            'imageurl':homepanel.imageurlicon, 'header':homepanel.header} %}
+            {% set vars = {'icon':homepanel.icon.icon, 'color':homepanel.icon.color, 'link':homepanel.icon.link, 'image':homepanel.icon.image, 
+            'imageurl':homepanel.icon.imageurl, 'header':homepanel.icon.header} %}
            {% include 'partials/icon.html.twig' with vars %}
             {{ homepanel.text|markdown }}
         </article>
