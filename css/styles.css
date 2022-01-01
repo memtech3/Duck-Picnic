@@ -227,42 +227,42 @@ main {
   background-color: #f4f4f4;
 }
 
-.footer {
+footer {
   background: #171717;
   color: #737373;
   padding-top: 40px;
 }
 @media only screen and (max-width: 980px) {
-  .footer {
+  footer {
     padding-left: 3.125%;
     padding-right: 3.125%;
     text-align: center;
   }
 }
 @media only screen and (min-width: 980px) {
-  .footer {
+  footer {
     padding-left: 25%;
     padding-right: 25%;
   }
 }
-.footer .content {
+footer .content {
   margin-right: auto;
   margin-left: auto;
   font-size: 14px;
   max-width: 600px;
 }
-.footer .icon {
+footer .icon {
   font-size: 2em;
   text-align: center;
 }
-.footer .image {
+footer .image {
   height: 2em;
 }
-.footer .largeicon {
+footer .largeicon {
   font-size: 8em;
   text-align: center;
 }
-.footer .largeimage {
+footer .largeimage {
   height: 8em;
 }
 
