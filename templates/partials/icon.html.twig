@@ -2,14 +2,14 @@
 <a href="{{ link }}">
     {% endif %}
     <header>
-        {% if icon is not empty %}
+        {% if icon %}
         <span style="color:{{ color }}"
             class="{{ icon }} icon {% if link %}fadeout{% endif %}"></span>
         {% endif %}
-        {% if image is not empty %}
+        {% if image %}
         <img class="image {% if link %}fadeout{% endif %}" src="{{ image }}" alt="">
         {% endif %}
-        {% if imageurl is not empty %}
+        {% if imageurl %}
         <img class="image {% if link %}fadeout{% endif %}" src="{{ imageurl }}" alt="">
         {% endif %}
         <br>
