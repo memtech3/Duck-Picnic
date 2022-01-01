@@ -1,6 +1,6 @@
 {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
 <footer>
-  <div class="noborderflex">
+  <div class="plainflex">
     {% for socialMediaIcon in grav.theme.config.footer.socialMediaIcons %}
     {% if socialMediaIcon.icon is not empty %}
     <a href="{{socialMediaIcon.url}}" style="color:{{socialMediaIcon.colorpicker}}"
@@ -19,7 +19,7 @@
   <div class="content">
     {{ grav.theme.config.footer.content|markdown }}
   </div>
-  <div class="noborderflex">
+  <div class="plainflex">
     {% for largeIcon in grav.theme.config.footer.largeIcons %}
     {% if largeIcon.icon is not empty %}
     <a href="{{largeIcon.url}}" style="color:{{largeIcon.colorpicker}}" class="{{largeIcon.icon}} largeicon"></a>
