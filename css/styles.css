@@ -274,12 +274,12 @@ footer .largeimage {
   font-size: 7em;
 }
 
-.noborderflex {
+.plainflex {
   display: flex;
   flex-wrap: wrap;
   transition: all 0.3s ease;
 }
-.noborderflex > * {
+.plainflex > * {
   flex: 1 1 auto;
   padding-bottom: 0.6em;
 }
