@@ -1,4 +1,10 @@
-{% set logo = theme_var('custom_logo') %} {% set logo_file = (logo|first).name %}
+{% if theme_var('custom_logo') %}
+{% set logo = theme_var('custom_logo') %}
+{% set logo_file = (logo|first).name %}
+{% else %}
+{% set logo = null %}
+{% set logo_file = 'logo.png' %}
+{% endif %}
 
 <header style="{% if header.appearance.textcolor %}color:{{header.appearance.textcolor}};{%endif%}height:{{header.appearance.height}}vh;background-color:{{header.appearance.backgroundcolor}}" class="hero">
   {% if header.content.backgroundvideo %}
