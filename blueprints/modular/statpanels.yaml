@@ -19,9 +19,3 @@ form:
                   title:
                   import@:
                     type: partials/icon
-                .header:
-                  type: text
-                  label: Statistic
-                .text:
-                  type: editor
-                  label: Text

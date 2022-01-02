@@ -22,25 +22,13 @@ form:
 
               fields:
                 .icon:
-                  type: iconpicker
-                  label: Icon
-                .colorpicker:
-                  type: colorpicker
-                  label: Icon Color
-                .imageicon:
-                  type: mediapicker
-                  folder: 'user/pages/images'
-                  label: Select an image to use as an icon
-                  preview_images: true
-                .imageurlicon:
-                  type: text
-                  label: Input a url to use as an icon
+                  type: section
+                  title:
+                  import@:
+                    type: partials/icon
                 .header:
                   type: text
                   label: Header
                 .text:
                   type: editor
                   label: Text
-                .url:
-                  type: text
-                  label: Link

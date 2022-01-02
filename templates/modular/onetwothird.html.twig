@@ -4,16 +4,9 @@
     <div class="fourth">
         <article class="card">
             <header>
-                <h>{{ onetwothird.header }}</h><br>
-                {% if onetwothird.icon is not empty %}
-                <a href="{{onetwothird.url}}" style="color:{{onetwothird.colorpicker}}" class="{{onetwothird.icon}} onetwothirdicon"></a>
-                {% endif %}
-                {% if onetwothird.imageicon is not empty %}
-                <a href="{{onetwothird.url}}"><img class="onetwothirdimage" src="{{ onetwothird.imageicon }}" alt="{{onetwothird.imageicon.filename}}"></a>
-                {% endif %}
-                {% if onetwothird.imageurlicon is not empty %}
-                <a href="{{onetwothird.url}}"><img class="onetwothirdimage" src="{{ onetwothird.imageurlicon }}" alt="{{onetwothird.imageurlicon}}"></a>
-                {% endif %}
+                {% with {icon:onetwothird.icon} %}
+                {% include 'partials/icon.html.twig' %}
+                {% endwith %}
             </header>
         </article>
     </div>
@@ -37,19 +30,9 @@
     <div class="fourth">
         <article class="card grey">
             <header>
-                <h>{{ onetwothird.header }}</h><br>
-                {% if onetwothird.icon is not empty %}
-                <a href="{{onetwothird.url}}" style="color:{{onetwothird.colorpicker}}"
-                    class="{{onetwothird.icon}} onetwothirdicon"></a>
-                {% endif %}
-                {% if onetwothird.imageicon is not empty %}
-                <a href="{{onetwothird.url}}"><img class="onetwothirdimage" src="{{ onetwothird.imageicon }}"
-                        alt="{{onetwothird.imageicon.filename}}"></a>
-                {% endif %}
-                {% if onetwothird.imageurlicon is not empty %}
-                <a href="{{onetwothird.url}}"><img class="onetwothirdimage" src="{{ onetwothird.imageurlicon }}"
-                        alt="{{onetwothird.imageurlicon}}"></a>
-                {% endif %}
+                {% with {icon:onetwothird.icon} %}
+                {% include 'partials/icon.html.twig' %}
+                {% endwith %}
             </header>
         </article>
     </div>
