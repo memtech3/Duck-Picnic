@@ -22,6 +22,10 @@ form:
       type: text
       label: Header
       toggleable: true
+    .smalltext:
+      type: text
+      label: Small Text
+      toggleable: true
     .link:
       type: text
       label: Link

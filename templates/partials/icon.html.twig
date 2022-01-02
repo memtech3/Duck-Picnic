@@ -13,7 +13,12 @@
         <img class="image {% if icon.link %}fadeout{% endif %}" src="{{ icon.imageurl }}" alt="">
         {% endif %}
         <br>
+        {% if icon.smalltext %}
+        <p class="{% if icon.link %}link{% endif %}">{{ icon.smalltext }}</p>
+        {% endif %}
+        {% if icon.header %}
         <h class="{% if icon.link %}link{% endif %}">{{ icon.header }}</h>
+        {% endif %}
     </header>
     {% if icon.link %}
 </a>
