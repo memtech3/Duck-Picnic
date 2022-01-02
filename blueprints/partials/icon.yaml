@@ -1,0 +1,32 @@
+form:
+  fields:
+    .icon:
+      type: iconpicker
+      label: Icon
+      toggleable: true
+    .color:
+      type: colorpicker
+      label: Icon Color
+      toggleable: true
+    .image:
+      type: mediapicker
+      folder: 'user/pages/images'
+      label: Select an image to use as an icon
+      preview_images: true
+      toggleable: true
+    .imageurl:
+      type: text
+      label: Input a url to use as an icon
+      toggleable: true
+    .header:
+      type: text
+      label: Header
+      toggleable: true
+    .smalltext:
+      type: text
+      label: Small Text
+      toggleable: true
+    .link:
+      type: text
+      label: Link
+      toggleable: true

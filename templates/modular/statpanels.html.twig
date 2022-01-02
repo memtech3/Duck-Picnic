@@ -3,11 +3,9 @@
     <div>
         <article class="card">
             <header style="border:none;">
-                {% if statpanel.icon is not empty %}
-                <a href="{{statpanel.url}}" style="color:{{statpanel.colorpicker}}" class="{{statpanel.icon}} icon"></a>
-                {% endif %}
-                <span>{{ statpanel.text|markdown }}</span>
-                <h style="font-color: {{statpanel.color}};">{{ statpanel.header }}</h>
+                {% with {icon:statpanel.icon} %}
+                {% include 'partials/icon.html.twig' %}
+                {% endwith %}
             </header>
         </article>
     </div>
