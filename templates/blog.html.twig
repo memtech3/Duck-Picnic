@@ -1,0 +1,10 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+<main>
+    {% for child in page.collection %}
+    {{child.title}}
+    {% endfor %}
+    <div class="flex-one">{{ page.content|raw }}</div>
+</main>
+{% endblock %}
