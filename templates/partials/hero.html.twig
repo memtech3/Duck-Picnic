@@ -1,0 +1,52 @@
+{% if theme_var('custom_logo') %}
+{% set logo = theme_var('custom_logo') %}
+{% set logo_file = (logo|first).name %}
+{% else %}
+{% set logo = null %}
+{% set logo_file = 'logo.png' %}
+{% endif %}
+
+<header
+    style="{% if hero.appearance.textcolor %}color:{{hero.appearance.textcolor}};{%endif%}height:{{hero.appearance.height}}vh;background-color:{{hero.appearance.backgroundcolor}}"
+    class="hero">
+    {% if hero.content.backgroundvideo or hero.content.backgroundimage %}
+    <div style="height:{{hero.appearance.height}}vh;" class="background">
+        {% if hero.content.backgroundvideo %}
+        <video class="media" preload="metadata" autoplay loop muted>
+            <source src="{{hero.content.backgroundvideo}}" type="video/mp4">
+        </video>
+        {% endif %}
+        {% if hero.content.backgroundimage %}
+        <img class="media" src="{{hero.content.backgroundimage}}" alt="">
+        {% endif %}
+        <div style="background:{{hero.appearance.backgroundcolor}};opacity:{{ hero.appearance.opacity/100 }};height:{{hero.appearance.height}}vh;"
+            class="overlay"></div>
+    </div>
+    {% endif %}
+    <div class="plainflex center grow content">
+        {% if hero.content.noimage == false %}
+        <div class="logocontainer">
+            <img src="{% if hero.content.overlayimage %}{{hero.content.overlayimage}}{% else %}{{ url('theme://images/logo/' ~ logo_file)  }}{% endif %}"
+                alt="">
+        </div>
+        {% endif %}
+        <div class="calltoaction">
+            <h1>{% if hero.content.header %} {{hero.content.header}} {% else %}{{ site.title }}{% endif %}</h1>
+            <p>{{ hero.content.body|markdown }}</p>
+            {% if hero.buttons %}
+            <div class="button-rows">
+                {% for row in hero.buttons.rows %}
+                <div class="plainflex">
+                    {% for button in row.buttons %}
+                    <a href="{{ button.link }}"
+                        style="{% if button.customcolor %}background:{{button.customcolor}};{% endif %}"
+                        class="button {{button.color}}">{{ button.text }}</a>
+                    {% if not loop.last %}&nbsp;{% endif %}
+                    {% endfor %}
+                </div>
+                {% endfor %}
+            {% endif %}
+            </div>
+        </div>
+    </div>
+</header>

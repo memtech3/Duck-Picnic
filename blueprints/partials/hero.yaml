@@ -1,0 +1,110 @@
+form:
+  fields:
+    .content:
+      type: fieldset
+      title: Content
+      help: Check the checkbox next to the field(s) you want to use. Deselect checkboxes next to fields that you want to use theme defaults 
+      info: Edit the content of the hero
+      icon: file-text
+      fields:
+        .header:
+          type: text
+          label: Header
+          toggleable: true
+        .body:
+          type: editor
+          label: Body
+        .noimage:
+          type: checkbox
+          label: Remove image
+        .overlayimage:
+          type: mediapicker
+          folder: 'user/pages/media/images'
+          label: Select an image to use as an overlay
+          preview_images: true
+          toggleable: true
+        .backgroundvideo:
+            type: mediapicker
+            folder: 'user/pages/media/'
+            label: Select a video to use as a background
+            preview_images: true
+            toggleable: true
+        .imageupload:
+          type: file
+          label: Upload images
+          destination: 'user/pages/media/images'
+          accept:
+            - image/*
+            - video/*
+    .buttons:
+      type: fieldset
+      title: Buttons
+      help:
+      info: Edit the buttons on the hero
+      icon: object-group
+      fields:
+        .rows:
+          name: rows
+          type: list
+          style: vertical
+          label: Rows
+          fields:
+            .buttons:
+              name: buttons
+              type: list
+              style: horizontal
+              label: Buttons
+              fields:
+                .text:
+                  name: text
+                  type: text
+                  label: text
+                .link:
+                  name: link
+                  type: text
+                  label: link
+                .color:
+                  name: color
+                  type: select
+                  toggleable: true
+                  label: Button Color
+                  options:
+                    primary: Primary Blue
+                    success: Success Green
+                    warning: Warning Orange
+                    error: Error Red
+                .customcolor:
+                  name: customcolor
+                  type: colorpicker
+                  toggleable: true
+                  label: Custom Button Color
+    .appearance:
+      type: fieldset
+      title: Appearance
+      help: Check the checkbox next to the field(s) you want to use. Deselect checkboxes next to fields that you want to use theme defaults 
+      info: Change the appearance of the hero
+      icon: paint-brush
+      fields:
+        .height:
+          type: range
+          label: Hero Height
+          default: 50
+          validate:
+            min: 0
+            max: 100
+        .textcolor:
+          type: colorpicker
+          label: Text Color
+          toggleable: true
+          default: "#474747"
+        .backgroundcolor:
+          type: colorpicker
+          label: Background Color
+          default: "#f9d537"
+        .opacity:
+          type: range
+          label: Background Opacity
+          defalt: 65
+          validate:
+            min: 0
+            max: 100

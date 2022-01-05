@@ -1,6 +1,9 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
+{% with {hero:header.hero} %}
+{% include 'partials/hero.html.twig' %}
+{% endwith %}
 <main>
     {% for child in page.collection %}
     {{child.title}}
