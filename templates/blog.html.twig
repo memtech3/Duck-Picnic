@@ -7,6 +7,7 @@
 <main>
     {% for child in page.collection %}
     {{child.title}}
+    {{ child.summary|raw }}
     {% endfor %}
     <div class="flex-one">{{ page.content|raw }}</div>
 </main>
