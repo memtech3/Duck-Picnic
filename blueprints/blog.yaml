@@ -26,6 +26,12 @@ form:
 
           fields:
 
+            header.hero:
+              type: section
+              title:
+              import@:
+                type: partials/hero
+
             content_title:
               type: spacer
               title: Content Definition

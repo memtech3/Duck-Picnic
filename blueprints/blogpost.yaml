@@ -1,0 +1,16 @@
+title: Blog Post
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        blogpost:
+          type: tab
+          title: Blog Post
+          fields:
+            header.hero:
+              type: section
+              title:
+              import@:
+                type: partials/hero
