@@ -3,14 +3,24 @@ title: Blog Post
 
 form:
   fields:
+    header.image:
+    type: filepicker
+    folder: 'theme://images/pages'
+    label: Select a file
+    preview_images: true
+    accept:
+      - .png
+      - .jpg
+      - .gif
+    header.hero:
+      type: section
+      title:
+      import@:
+        type: partials/hero
     tabs:
       fields:
         blogpost:
           type: tab
           title: Blog Post
           fields:
-            header.hero:
-              type: section
-              title:
-              import@:
-                type: partials/hero
+            
