@@ -22,6 +22,7 @@ body {
   display: none;
   min-width: 160px;
   position: absolute;
+  text-align: center;
 }
 @media only screen and (max-width: 960px) {
   .dropdown .dropdown-content {
@@ -36,6 +37,11 @@ body {
 }
 .dropdown .dropdown-content a:hover {
   background-color: #ddd;
+}
+@media screen and (min-width: 960px) {
+  .dropdown:last-child .dropdown-content {
+    right: 0;
+  }
 }
 
 main {
