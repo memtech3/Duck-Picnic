@@ -1,9 +1,4 @@
-{% extends 'partials/base.html.twig' %}
-{% block content %}
-{% with {hero:header.hero} %}
-{% include 'partials/hero.html.twig' %}
-{% endwith %}
-<main>
+{% extends 'blogbase.html.twig' %}
+{% block blogcontent %}
     <div class="flex-one">{{ page.content|raw }}</div>
-</main>
 {% endblock %}

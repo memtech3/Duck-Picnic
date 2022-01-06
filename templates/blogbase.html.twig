@@ -1,0 +1,16 @@
+{% set blog = page.find(header_var('blog_url')|defined(theme_var('blog-page'))) %}
+{% extends 'partials/base.html.twig' %}
+{% block content %}
+{% with {hero:header.hero} %}
+{% include 'partials/hero.html.twig' %}
+{% endwith %}
+<div class="plainflex one two-900">
+    <main>
+        {% block blogcontent %}
+        {% endblock %}
+    </main>
+    <aside class="none sixth-900">
+        {% include 'partials/blogsidebar.html.twig' %}
+    </aside>
+</div>
+{% endblock %}

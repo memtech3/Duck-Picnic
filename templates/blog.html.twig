@@ -1,26 +1,37 @@
-{% extends 'partials/base.html.twig' %}
-{% block content %}
-{% with {hero:header.hero} %}
-{% include 'partials/hero.html.twig' %}
-{% endwith %}
-<main>
+{% extends 'blogbase.html.twig' %}
+{% block blogcontent %}
     <div class="flex two">
-        <div>
             {% for post in page.collection %}
-            <article class="card">
-                <a href="">
-                    <img src="/img/forest.jpg">
-                </a>
-                <footer>
-                    <p>date goes here</p>
-                    <a href="{{post.url}}">
-                        <h3>{{post.title}}</h3>
+            <div>
+                <article class="card">
+                    <a href="">
+                        <img src="/img/forest.jpg">
                     </a>
-                    <p>{{post.summary|raw}}</p>
-                </footer>
-            </article>
+                    <footer>
+                        <p class="datestamp"><span class="fa fa-calendar"></span> date goes here</p>
+                        <a href="{{post.url}}">
+                            <h3>{{post.title}}</h3>
+                        </a>
+                        <p>{{post.summary|raw}}</p>
+                    </footer>
+                </article>
+                {% endfor %}
+            </div>
+            {% for post in page.collection %}
+            <div>
+                <article class="card">
+                    <a href="">
+                        <img src="/img/forest.jpg">
+                    </a>
+                    <footer>
+                        <p class="datestamp"><span class="fa fa-calendar"></span> date goes here</p>
+                        <a href="{{post.url}}">
+                            <h3>{{post.title}}</h3>
+                        </a>
+                        <p>{{post.summary|raw}}</p>
+                    </footer>
+                </article>
+            </div>
             {% endfor %}
-        </div>
     </div>
-</main>
 {% endblock %}

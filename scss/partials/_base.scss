@@ -54,7 +54,16 @@ main {
     }
     max-width: 1300px;
 }
+aside {
+    padding: 5em 0;
+    max-width: 400px;
+}
 table {
     display: block;
     overflow-x:scroll;
+}
+
+.datestamp {
+    color: grey;
+    font-size: 8pt;
 }
