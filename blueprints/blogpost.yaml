@@ -3,15 +3,19 @@ title: Blog Post
 
 form:
   fields:
-    header.image:
-    type: filepicker
-    folder: 'theme://images/pages'
-    label: Select a file
-    preview_images: true
-    accept:
-      - .png
-      - .jpg
-      - .gif
+    .imagepickersection:
+      type: section
+      title: title
+      fields:
+        header.image:
+        type: filepicker
+        folder: 'theme://images/pages'
+        label: posiefhpweoigfjapfioejapwlef
+        preview_images: true
+        accept:
+          - .png
+          - .jpg
+          - .gif
     header.hero:
       type: section
       title:
