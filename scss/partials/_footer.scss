@@ -17,18 +17,21 @@ footer {
 		font-size: 14px;
 		max-width: 600px;
 	}
-	.icon {
-	font-size: 2em;
-	text-align: center;
-	}
-	.image {
-	height: 2em;
-	}
+	// .icon {
+	// 	font-size: 2em;
+	// 	text-align: center;
+	// }
+	// .image {
+	// 	height: 2em;
+	// }
 	.largeicon {
-	font-size: 8em;
-	text-align: center;
-	}
-	.largeimage {
-	height: 8em;
+		font-size: 8em;
+		text-align: center;
+		.icon {
+			font-size: 8em;
+		}
+		img {
+			height: 8em;
+		}
 	}
 }
