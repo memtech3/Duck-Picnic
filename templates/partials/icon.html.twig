@@ -1,7 +1,7 @@
 {% if icon.link %}
 <a href="{{ icon.link }}">
     {% endif %}
-    <header class=" {{ iconclass }} ">
+    <header class="iconPartial {{ iconclass }} ">
         {% if icon.icon %}
         <span style="color:{{ icon.color }}"
             class="{{ icon.icon }} icon {% if icon.link %}fadeout{% endif %}"></span>

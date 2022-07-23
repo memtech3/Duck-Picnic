@@ -2,7 +2,7 @@
 <footer>
   <div class="plainflex">
     {% for smallicon in grav.theme.config.footer.smallicons %}
-      {% with {icon:smallicon.smallicon} %}
+      {% with {icon:smallicon.smallicon, iconclass:"smallIcon"} %}
       {% include 'partials/icon.html.twig' %}
       {% endwith %}
     {% endfor %}
@@ -12,7 +12,7 @@
   </div>
   <div class="plainflex">
     {% for largeicon in grav.theme.config.footer.largeicons %}
-      {% with {icon:largeicon.largeicon, iconclass:"largeicon"} %}
+      {% with {icon:largeicon.largeicon} %}
       {% include 'partials/icon.html.twig' %}
       {% endwith %}
     {% endfor %}
