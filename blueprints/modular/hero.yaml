@@ -38,6 +38,12 @@ form:
                     label: Select a video to use as a background
                     preview_images: true
                     toggleable: true
+                .backgroundimage:
+                    type: mediapicker
+                    folder: 'user/pages/media/'
+                    label: Select an image to use as a background
+                    preview_images: true
+                    toggleable: true
                 .imageupload:
                   type: file
                   label: Upload images
