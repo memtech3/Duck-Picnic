@@ -141,13 +141,7 @@ table {
   height: 100%;
   border: none;
 }
-.statpanels article header {
-  border: none;
-  font-size: 32px;
-  text-align: center;
-}
 .statpanels article header .icon {
-  color: #b84545;
   font-size: 3em;
 }
 .statpanels article p {
@@ -169,28 +163,6 @@ table {
 }
 .home-panels article header {
   border: none;
-  font-size: 32px;
-  text-align: center;
-}
-.home-panels article header .image {
-  height: 4em;
-}
-.home-panels article header .icon {
-  color: #b84545;
-  font-size: 4em;
-  transition: all 0.3s ease;
-}
-.home-panels article header:hover .fadeout, .home-panels article header:focus-within .fadeout {
-  opacity: 0.7;
-}
-.home-panels article header .link {
-  color: #474747;
-  box-shadow: 0 2px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-}
-.home-panels article header:hover .link, .home-panels article header:focus-within .link {
-  color: #666;
-  box-shadow: 0 2px #333;
 }
 .home-panels article p {
   justify-self: center;
@@ -261,19 +233,38 @@ footer .content {
   font-size: 14px;
   max-width: 600px;
 }
-footer .icon {
-  font-size: 2em;
+footer .smallIcon .icon {
+  font-size: 1.5em;
   text-align: center;
 }
-footer .image {
-  height: 2em;
+footer .smallIcon .image {
+  height: 1.5em;
 }
-footer .largeicon {
-  font-size: 8em;
+
+.iconPartial {
+  border: none;
+  font-size: 32px;
   text-align: center;
 }
-footer .largeimage {
-  height: 8em;
+.iconPartial .image {
+  height: 4em;
+}
+.iconPartial .icon {
+  color: #b84545;
+  font-size: 4em;
+  transition: all 0.3s ease;
+}
+.iconPartial:hover .fadeout, .iconPartial:focus-within .fadeout {
+  opacity: 0.7;
+}
+.iconPartial .link {
+  color: #474747;
+  box-shadow: 0 2px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+.iconPartial:hover .link, .iconPartial:focus-within .link {
+  color: #666;
+  box-shadow: 0 2px #333;
 }
 
 .onetwothirdimage {
@@ -300,14 +291,6 @@ footer .largeimage {
   }
   .mobile-vis {
     display: unset;
-  }
-}
-@media only screen and (min-width: 1000px) {
-  .mobile-invis {
-    display: unset;
-  }
-  .mobile-vis {
-    display: none;
   }
 }
 

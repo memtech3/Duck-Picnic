@@ -1,10 +1,11 @@
 @import 'partials/base';
-@import 'partials/_alert';
+@import 'partials/alert';
 @import 'partials/hero';
 @import 'partials/statpanels';
 @import 'partials/homepanels';
 @import 'partials/abouthalf';
 @import 'partials/footer';
+@import 'partials/icon';
 .onetwothirdimage {
 	max-height: 7em;
 }
@@ -26,13 +27,5 @@
 	}
 	.mobile-vis {
 		display: unset;
-	}
-}
-@media only screen and (min-width: 1000px) {
-	.mobile-invis {
-		display: unset;
-	}
-	.mobile-vis {
-		display: none;
 	}
 }
