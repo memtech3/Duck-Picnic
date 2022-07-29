@@ -5,4 +5,4 @@ The **Duck Picnic** Theme is a versatile [Grav CMS](http://github.com/getgrav/gr
 # Development
 
 This theme uses SASS for css. To compile the .scss files, run ```npm sass-dev.``` 
-For convenience, a copy of Grav with test content and caching disabled is available at https://github.com/memtech3/Duck-Picnic-Development-Environment
+For convenience, a copy of Grav with test content and caching disabled is available at https://github.com/memtech3/Duck-Picnic-Development-Environment. Documentation for development currently also lives in the dev environment repository
