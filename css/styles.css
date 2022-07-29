@@ -161,6 +161,9 @@ table {
   border: none;
   height: 100%;
 }
+.home-panels article header {
+  border: none;
+}
 .home-panels article p {
   justify-self: center;
   padding-left: 3.125%;
