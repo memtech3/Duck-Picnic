@@ -46,8 +46,8 @@ form:
                     toggleable: true
                 .imageupload:
                   type: file
-                  label: Upload images
-                  destination: 'user/pages/media/images'
+                  label: Upload media
+                  destination: 'user/pages/media/'
                   accept:
                     - image/*
                     - video/*
